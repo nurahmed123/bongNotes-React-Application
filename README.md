@@ -2,6 +2,42 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About this project
+## `Backend`
+
+📦Packages are used in this project: 
+
+* Backend Server: [MongoDb](https://www.mongodb.com/)
+
+* [Express](https://expressjs.com/): 
+```
+$ npm install express
+```
+* [MongoDb](https://mongoosejs.com/docs/index.html): 
+```
+$ npm install mongoose --save
+```
+* [Express validator](https://express-validator.github.io/docs/): 
+```
+$ npm install --save express-validator
+```
+* [Bcrypt Js](https://www.npmjs.com/package/bcryptjs): 
+```
+$ npm i bcryptjs
+```
+* [JWT ( jsonwebtoken )](https://www.npmjs.com/package/bcryptjs): 
+```
+$ npm i jsonwebtoken
+```
+
+
+<!-- * [](): 
+```
+$ 
+``` -->
+
+
+## `Fontend`
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +104,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# `Contact us `
+If you need any kind of help on your project or have any doubt feel free to contact with us 🥰
+
+[Facebook](https://www.facebook.com/EEE-project-solution-lab-107106394047092)   
+[YouTube](https://www.youtube.com/c/BongProgramiz)   
+[Instagram](https://www.instagram.com/06nurahmed) 
+
+<a href = "https://www.facebook.com/EEE-project-solution-lab-107106394047092/"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
+<a href = "https://www.youtube.com/c/BongProgramiz"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
+<a href = "https://www.instagram.com/06nurahmed/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
