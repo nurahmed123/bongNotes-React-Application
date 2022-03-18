@@ -92,7 +92,7 @@ router.post('/login', [
     }
 });
 
-// ROUTE 3: Get loggedin User Details using: POST "/api/auth/getuser". Login required
+//TODO: ROUTE 3: Get loggedin User Details using: POST "/api/auth/getuser". Login required
 router.post('/getuser', FetchUser, async (req, res) => {
 
     try {
