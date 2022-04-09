@@ -11,10 +11,14 @@ export default function SignUp() {
     const context = useContext(noteContext)
     const { showAlert } = context;
 
+    if(localStorage.getItem("authToken")){
+        history.push("/")
+    }
+
     const createAccount = async (event) => {
         event.preventDefault();
 
-        //TODO: Login user
+        //TODO: Signup user
         const host = "http://localhost:300";
 
         const response = await fetch(`${host}/api/auth/createuser`, {

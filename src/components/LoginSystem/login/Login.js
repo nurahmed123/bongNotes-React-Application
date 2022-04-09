@@ -11,6 +11,10 @@ export default function Login() {
 
     const [userInputData, setUserInputData] = useState({ email: "", password: "" })
 
+    if(localStorage.getItem("authToken")){
+        history.push("/")
+    }
+
     const loginUser = async (event) => {
         event.preventDefault();
 
