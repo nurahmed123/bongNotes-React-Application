@@ -25,9 +25,13 @@ $ npm install --save express-validator
 ```
 $ npm i bcryptjs
 ```
-* [JWT ( jsonwebtoken )](https://www.npmjs.com/package/bcryptjs): 
+* [JWT ( jsonwebtoken )](https://www.npmjs.com/package/jsonwebtoken): 
 ```
 $ npm i jsonwebtoken
+```
+* [JWT ( jsonwebtoken )](https://www.npmjs.com/package/cors): 
+```
+$ npm i cors
 ```
 
 
@@ -41,6 +45,24 @@ $
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `Packages`
+* [Concurrently](https://www.npmjs.com/package/concurrently): 
+```
+$ npm i concurrently
+```
+* [React router](https://www.npmjs.com/package/react-router-dom): 
+```
+$ npm i react-router-dom
+```
+
+### `npm run bothServers`
+
+Runs the app in the development mode.\
+Fronten server will open on [http://localhost:3000](http://localhost:3000) to view it in your browser. And backend server will start on port 300.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ### `npm start`
 

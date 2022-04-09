@@ -5,9 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+html {
+  --scrollbarBG: transparent;
+  --thumbBG: #28b485;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul{
+  height: auto !important;
+}
+
+.infinite-scroll-component{
+  width: auto !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.sweetBtnStyle {
+  height: 3.3rem;
+  font-size: 21px !important;
+  width: 9rem;
 }
