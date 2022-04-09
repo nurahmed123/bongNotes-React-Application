@@ -45,10 +45,11 @@ router.post('/createuser', [
                 id: user.id
             }
         }
+        const verify_user = user.verify;
         const authToken = jwt.sign(data, JWT_SECRET);
 
         success = true;
-        res.json({ success, message: "Your data has been successfully updated to your database", authToken })
+        res.json({ success, message: "Your data has been successfully updated to your database", authToken, verify_user })
     } catch (error) {
         console.error(error.message)
         res.status(500).send("Internal Server Error");
@@ -107,6 +108,47 @@ router.post('/getuser', FetchUser, async (req, res) => {
         userId = req.user.id;
         const user = await User.findById(userId).select("-password")
         res.send(user)
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+//TODO: ROUTE 3: Update loggedin User Details using: POST "/api/auth/updateuser". Login required
+router.post('/updateuser', FetchUser, async (req, res) => {
+
+    try {
+        const { name, email, password, verify } = req.body;
+        const newUserInfo = {};
+        if (name) { newUserInfo.name = name };
+        if (email) { newUserInfo.email = email };
+        if (verify) { newUserInfo.verify = verify };
+        // Create password hash
+        const salt = await bcrypt.genSaltSync(10);
+        let securePassword = await bcrypt.hashSync(password, salt);
+        if (password) { newUserInfo.password = securePassword };
+
+        // Find the user to be updated and update it
+        const userId = req.user.id;
+        const user = await User.findById(userId).select("-password")
+        if (!user) { return res.status(404).send("Not Found") }
+
+        const updateUser = await User.findByIdAndUpdate(req.user.id, { $set: newUserInfo }, { new: true })
+        res.json({ updateUser });
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+//TODO: ROUTE 3:Delete user account using: delete "/api/auth/deleteaccount". Login required
+router.delete('/deleteaccount/:id', FetchUser, async (req, res) => {
+    try {
+        let deleteAccount = await User.findById(req.params.id);
+        if (!deleteAccount) { return res.status(404).send("Not Found")}
+
+        deleteAccount = await User.findByIdAndDelete(req.params.id)
+        res.json({ "Success": "Account has been deleted", deleteAccount});
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal Server Error");
