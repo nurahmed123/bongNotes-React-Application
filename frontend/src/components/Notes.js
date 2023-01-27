@@ -53,12 +53,12 @@ export default function Notes() {
                                 <div className="mb-3">
                                     <label htmlFor="updateTitle" className="form-label">Title</label>
                                     <input type="text" className="form-control" id="updateTitle" name="updateTitle" value={note.updateTitle} aria-describedby="updateTitleHelp" onChange={update__notes__value} />
-                                    {note.updateTitle.length < 3 ? <div id="emailHelp" className="form-text text-danger">Title must 3 characters</div> : ""}
+                                    {note.updateTitle.length < 2 ? <div id="emailHelp" className="form-text text-danger">Title must 2 characters</div> : ""}
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="updateDescription" className="form-label">Description</label>
                                     <textarea className="form-control" name="updateDescription" value={note.updateDescription} id="updateDescription" cols="15" rows="5" onChange={update__notes__value}></textarea>
-                                    {note.updateDescription.length < 5 ? <div id="emailHelp" className="form-text text-danger">Description must 5 characters</div> : ""}
+                                    {note.updateDescription.length < 2 ? <div id="emailHelp" className="form-text text-danger">Description must 2 characters</div> : ""}
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="updateTag" className="form-label">Tag</label>
@@ -67,7 +67,7 @@ export default function Notes() {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" disabled={note.updateTitle.length < 3 || note.updateDescription.length < 5} onClick={updateNoteHandling} className="btn btn-primary">Save changes</button>
+                            <button type="button" disabled={note.updateTitle.length < 2 || note.updateDescription.length < 2} onClick={updateNoteHandling} className="btn btn-success">Save changes</button>
                             <button type="button" ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>

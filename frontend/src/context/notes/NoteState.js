@@ -1,3 +1,4 @@
+
 import NoteContext from "./noteContext";
 import { useState } from "react";
 import Alert from "../../components/Alert";
@@ -97,8 +98,10 @@ const NoteState = (props) => {
 
     }
 
+    const [dictionaryWord, setdictionaryWord] = useState("");
+
     return (
-        <NoteContext.Provider value={{ notes, setNotes, alert, setAlert, showAlert, addNote, deleteNote, editNote, getNotes }}>
+        <NoteContext.Provider value={{ notes, dictionaryWord, alert, setdictionaryWord, setNotes, setAlert, showAlert, addNote, deleteNote, editNote, getNotes }}>
             {props.children}
             <Alert alert={alert} />
         </NoteContext.Provider>

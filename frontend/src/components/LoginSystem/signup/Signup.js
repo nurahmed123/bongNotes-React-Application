@@ -11,8 +11,8 @@ export default function SignUp() {
     const context = useContext(noteContext)
     const { showAlert } = context;
 
-    if(localStorage.getItem("authToken")){
-        history.push("/")
+    if (localStorage.getItem("authToken")) {
+        history.push("/notes")
     }
 
     const createAccount = async (event) => {
@@ -38,7 +38,7 @@ export default function SignUp() {
             showAlert("Successfully signup", "success")
             // save the authToken and redirect
             localStorage.setItem("authToken", json.authToken)
-            history.push("/")
+            history.push("/notes")
 
         } else {
             showAlert("Invalid credentials", "error")

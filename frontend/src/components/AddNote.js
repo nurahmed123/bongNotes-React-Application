@@ -25,19 +25,19 @@ export default function AddNote() {
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Title</label>
                     <input type="text" className="form-control" id="title" name="title" aria-describedby="titleHelp" onChange={notes__value} value={note.title} />
-                    {1 <= note.title.length && note.title.length < 3 ? <div id="emailHelp" className="form-text text-danger">Title must 3 characters</div> : ""}
+                    {1 <= note.title.length && note.title.length < 2 ? <div id="emailHelp" className="form-text text-danger">Title must 2 characters</div> : ""}
                 </div>
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label">Description</label>
                     <textarea className="form-control" name="description" id="description" cols="15" rows="5" onChange={notes__value} value={note.description} ></textarea>
-                    {1 <= note.description.length && note.description.length < 5 ? <div id="emailHelp" className="form-text text-danger">Description must 5 characters</div> : ""}
+                    {1 <= note.description.length && note.description.length < 2 ? <div id="emailHelp" className="form-text text-danger">Description must 2 characters</div> : ""}
                 </div>
                 <div className="mb-3">
                     <label htmlFor="tag" className="form-label">Tag</label>
                     <input type="text" className="form-control" id="tag" name="tag" aria-describedby="tagHelp" onChange={notes__value} value={note.tag} />
                 </div>
 
-                <button type="submit" disabled={note.title.length < 3 || note.description.length < 5} onClick={newNote} className="btn btn-success">Add notes</button>
+                <button type="submit" disabled={note.title.length < 2 || note.description.length < 2} onClick={newNote} className="btn btn-success">Add notes</button>
             </form>
         </>
     )

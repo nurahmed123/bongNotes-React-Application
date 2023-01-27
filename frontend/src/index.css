@@ -8,6 +8,55 @@ body {
 
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  background-color: #151c23;
+  color: whitel
+}
+
+.modal-content {
+  background-color: #151c23;
+}
+
+.swal2-container.swal2-top-end>.swal2-popup,
+.swal2-container.swal2-top-right>.swal2-popup {
+  background: #1f2830;
+}
+
+#swal2-title {
+  color: white;
+}
+
+h1,
+h2,
+h5 {
+  color: #dad7d7;
+}
+
+.card-body {
+  background: #272e35;
+}
+
+div {
+  color: white;
+}
+
+.swal2-popup {
+  background-color: #151c23;
+  color: white;
+}
+
+label,
+i {
+  color: #8090a1;
+}
+
+.form-control,
+.form-control:focus {
+  background: #242b32;
+  color: whitesmoke;
+}
+
+p {
+  color: #d4dadf;
 }
 
 body::-webkit-scrollbar {
@@ -19,7 +68,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
@@ -34,11 +83,11 @@ code {
     monospace;
 }
 
-ul{
+ul {
   height: auto !important;
 }
 
-.infinite-scroll-component{
+.infinite-scroll-component {
   width: auto !important;
   height: auto !important;
   overflow: hidden !important;
@@ -48,4 +97,5 @@ ul{
   height: 3.3rem;
   font-size: 21px !important;
   width: 9rem;
+  background: red;
 }

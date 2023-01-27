@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = () => {
+const Contact = () => {
     // eslint-disable-next-line
     return (
         <div>
@@ -9,4 +9,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Contact

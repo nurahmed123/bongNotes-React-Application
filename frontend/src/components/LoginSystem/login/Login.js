@@ -11,8 +11,8 @@ export default function Login() {
 
     const [userInputData, setUserInputData] = useState({ email: "", password: "" })
 
-    if(localStorage.getItem("authToken")){
-        history.push("/")
+    if (localStorage.getItem("authToken")) {
+        history.push("/notes")
     }
 
     const loginUser = async (event) => {
@@ -34,7 +34,7 @@ export default function Login() {
             showAlert("Login success", "success")
             // save the authToken and redirect
             localStorage.setItem("authToken", json.authToken)
-            history.push("/")
+            history.push("/notes")
 
         } else {
             showAlert("Invalid credentials", "error")
@@ -61,7 +61,7 @@ export default function Login() {
                         {1 <= userInputData.password.length && userInputData.password.length < 6 ? <div id="emailHelp" className="form-text text-danger">Password must 6 characters</div> : ""}
                         <div className="form-text text-success">You have no account? <Link className="link-info hover-overlay hover-zoom hover-shadow" to="/signup">Create account</Link></div>
                     </div>
-                    <button type="submit" className="btn btn-success" disabled={userInputData.email.length < 1 || userInputData.password.length < 6}>Submit</button>
+                    <button type="Login" className="btn btn-success" disabled={userInputData.email.length < 1 || userInputData.password.length < 6}>Submit</button>
                 </form>
             </div>
         </>

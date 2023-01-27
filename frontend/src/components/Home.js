@@ -1,11 +1,11 @@
 import React from 'react'
-import Notes from './Notes'
+import Gtranslate from './Gtranslate'
 
 export default function Home() {
     return (
         <>
             <div className='container my-3'>
-                <Notes />
+                <Gtranslate />
             </div>
         </>
     )
